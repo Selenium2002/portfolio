@@ -1,0 +1,7 @@
+input[type="submit"]{
+    margin-top: 20px;
+    width: 100%;
+}
+form div{
+    margin-bottom: 20px;
+}
