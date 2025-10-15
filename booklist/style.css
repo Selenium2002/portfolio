@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    font-family: "Josefin Sans", sans-serif;
+}
+
 input[type="submit"]{
     margin-top: 20px;
     width: 100%;
 }
 form div{
     margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: 'super-trend'; 
+    src: url('Super\ Trend.ttf');
+}
+h1,h1 span{
+    font-family: super-trend;
 }
