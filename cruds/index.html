@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="aspects/crud-icon.jpg">
     <script src="main.js" defer></script>
     <title>CRUDS</title>
 </head>
 <body>
     <div class="crud">
         <div class="head">
+            <img src="aspects/moon-icon.png" alt="moon" id="darkIcon" />
             <h2>crud</h2>
             <p>product management system</p>
         </div>
@@ -24,19 +26,20 @@
                 <small id="total"></small>
             </div>
             <input type="number" placeholder="Count" id="count">
-            <input type="number" placeholder="Category" id="category">
+            <input type="text" placeholder="Category" id="category">
             <button id="submit">Create</button>
         </div>
 
         <div class="outputs">
             <div class="search-block">
-                <input type="text" id="search" placeholder="Search">
+                <input type="search" onkeyup="searchForData(this.value)" id="search" placeholder="Search">
                 <div class="btn-search">
-                    <button id="searchByTitle">Search By Title</button>
-                    <button id="searchByCategory">Search By Category</button>
+                    <button onclick="getSearchMode(this.id)" id="searchByTitle">Search By Title</button>
+                    <button onclick="getSearchMode(this.id)" id="searchByCategory">Search By Category</button>
                 </div>
             </div>
         </div>
+        <div id="deleteAll"></div>
         <table>
             <thead>
                 <tr>
@@ -52,7 +55,7 @@
                     <th>delete</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="pushData">
 
             </tbody>
         </table>

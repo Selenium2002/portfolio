@@ -5,8 +5,48 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body{
-    background-color: #222;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+:root{
+    --primary-color: #222;
+    --secondary-color: #fff;
+    --inputs-bg-color: #111;
+    --inputs-focus: #000;
+    --buttons-bg-color: #36027a;
+    --buttons-hover-color: #580eb8;
+    --total-bg: #a00d02;
+    --total-change: #040;
+}
+.dark-mode{
+    --primary-color: #222;
+    --secondary-color: #fff;
+    --inputs-bg-color: #111;
+    --inputs-focus: #000;
+    --buttons-bg-color: #36027a;
+    --buttons-hover-color: #580eb8;
+    --total-bg: #a00d02;
+    --total-change: #040;
+}
+
+.light-mode{
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --inputs-bg-color: #21dfd9;
+    --inputs-focus: #c1f6f4;
+    --buttons-bg-color: #3db5ff;
+    --buttons-hover-color: #327ba8;
+    --total-bg: #f6837b;
+    --total-change: rgb(139, 255, 139);
+}
+
+#darkIcon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translate(-300px, 3px);
 }
 .crud{
     width: 80%;
@@ -22,20 +62,20 @@ input{
     height: 30px;
     outline: none;
     border: none;
-    background-color: #111;
-    color: #fff;
+    background-color: var(--inputs-bg-color);
+    color: var(--secondary-color);
     margin: 5px 0;
     border-radius: 5px;
 }
 input:focus{
-    background-color: #000;
+    background-color: var(--inputs-focus);
     transform: scale(1.1);
 }
 .price input{
     width: 20%;
 }
 #total{
-    background-color: #a00d02;
+    background-color: var(--total-bg);
     padding: 5px 2px;
     border-radius: 5px;
 }
@@ -46,14 +86,14 @@ button{
     width: 100%;
     height: 30px;
     border: none;
-    background-color: #36027a;
-    color: #fff;
+    background-color: var(--buttons-bg-color);
+    color: var(--secondary-color);
     cursor: pointer;
     border-radius: 25px;
     transition: 0.5s;
 }
 button:hover{
-    background-color: #580eb8;
+    background-color: var(--buttons-hover-color);
     letter-spacing: 1px;
 }
 .btn-search{
@@ -62,6 +102,9 @@ button:hover{
 }
 .btn-search button{
     width: 45%;
+}
+#deleteAll {
+    margin: 20px 0;
 }
 table{
     width: 100%;
