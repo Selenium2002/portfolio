@@ -11,7 +11,6 @@ if(theme === 'light-mode') {
     moonImg.style.backgroundColor = "#b2b2b2ff";
     moonImg.src = "aspects/moon-icon.png";
 }
- //short circuiting
 
 moonImg.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
@@ -43,8 +42,6 @@ let searchCategoryBtn = document.getElementById("searchByCategory");
 let tbodyElement = document.querySelector("#pushData");
 let dataMode = "create";
 let updatedItem;
-
-
 
 
 // Create a Product
@@ -89,9 +86,6 @@ submitBtn.onclick = () => {
         clearData();
     }
 
-    
-
-
     // Store a Product
     localStorage.setItem("product", JSON.stringify(dataProduct));
     readData();
@@ -132,7 +126,6 @@ const readData = () => {
 }
 
 
-
 // Get Total
 let totalInputs = document.querySelectorAll(".price input[type = number]");
 const getTotal = () => {
@@ -148,7 +141,6 @@ const getTotal = () => {
 totalInputs.forEach(totalInput => totalInput.addEventListener("keyup", getTotal));
 
 readData();
-
 
 
 // Update a Product
@@ -186,7 +178,6 @@ const deleteAll = () => {
     dataProduct.splice(0);
     readData();
 }
-
 
 
 // Search For a Product
@@ -241,12 +232,9 @@ const searchForData = value => {
             `
             }
         }    
-    }
-    
-    tbodyElement.innerHTML = dataTable;
-    
+    } 
+    tbodyElement.innerHTML = dataTable
 }
-
 
 
 // Clear Inputs
@@ -260,6 +248,3 @@ const clearData = () => {
     countInput.value = '';
     categoryInput.value = '';
 }
-
-
-// Clean Data
