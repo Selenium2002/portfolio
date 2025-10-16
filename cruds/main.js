@@ -5,21 +5,21 @@ const theme = localStorage.getItem('theme');
 if(theme === 'light-mode') {
     document.body.classList.add('light-mode');
     moonImg.style.backgroundColor = "#ffffffff";
-    moonImg.src = "aspects/sun-icon.png";
+    moonImg.src = "assets/sun-icon.png";
 }else{
     document.body.classList.add('dark-mode');
     moonImg.style.backgroundColor = "#b2b2b2ff";
-    moonImg.src = "aspects/moon-icon.png";
+    moonImg.src = "assets/moon-icon.png";
 }
 
 moonImg.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
     if(document.body.classList.contains("light-mode")) {
-        moonImg.src = "aspects/sun-icon.png";
+        moonImg.src = "assets/sun-icon.png";
         moonImg.style.backgroundColor = "#ffffffff";
         localStorage.setItem('theme', 'light-mode');
     }else{
-        moonImg.src = "aspects/moon-icon.png";
+        moonImg.src = "assets/moon-icon.png";
         moonImg.style.backgroundColor = "#b2b2b2ff";
         localStorage.setItem('theme', 'dark-mode');
     }
