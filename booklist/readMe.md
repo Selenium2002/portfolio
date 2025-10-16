@@ -37,14 +37,14 @@ https://cdnjs.com/libraries/font-awesome
 # Notes
 
 
-### * There are three alerts will be shown up on the the to of the page
+### * There are three alerts will be shown up on the top of the page
 ### And each one of them will automatically vanish after 3 seconds.
 
 ### * First one which is red and it will appear after supmitting with
 ### empty fields. 
 
 ### * Second one which is green and it will show after filling up all 
-### the fields and presssing "add book". 
+### the fields and pressing "add book" button. 
 
 ### * The third and the last one is blue and it will appear after you 
 ### delete any of each book you added.
@@ -57,4 +57,10 @@ https://cdnjs.com/libraries/font-awesome
 ### letting them all show up in the same time and also after making
 ### any action.
 
-### * If you added a button which functions to delete all data in one click.
+### * If you added a button which functions to delete all data in one click, 
+### it will be much better for your project.
+
+### * May you create a good validation IDE for the fields .i.e 
+### putting text limitation of each field, adding some regex
+### as you won't be allowed to write some pattern ?!
+
